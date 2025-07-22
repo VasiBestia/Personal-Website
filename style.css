@@ -1,0 +1,263 @@
+header {
+  background-color: #1b3c53;
+}
+section {
+  margin-top: 0 !important;
+}
+/* From Uiverse.io by zjssun */
+.button {
+  position: relative;
+  top: 0.5rem;
+  padding: 6px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #1b3c53;
+  cursor: pointer;
+  background-color: #f9f3ef;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #f9f3ef 20%, transparent 30%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #f9f3ef 15%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #f9f3ef 15%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%),
+    radial-gradient(circle, #f9f3ef 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.nav-link {
+  color: white;
+}
+footer {
+  background-color: #d2c1b6;
+}
+.btn {
+  width: 9em;
+  height: 2.3em;
+  margin: 0.5em;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.btn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+a {
+  text-decoration: none;
+}
+#home {
+  background-color: #f9f3ef;
+}
+.custom-color {
+  color: #e8e2dc !important;
+  background-color: #1b3c53 !important;
+}
+.custom-bg-crem {
+  background-color: #f9f3ef;
+  color: #1b3c53 !important;
+}
+.logo-pict {
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+  border-radius: 50%;
+}
+.handwritten {
+  font-family: "Pacifico", cursive;
+}
+
+.profile-img {
+  object-fit: cover;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+/* Scrollbar de bază pentru Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  transition: opacity 0.3s ease;
+}
+
+/* Fundalul pistei */
+::-webkit-scrollbar-track {
+  background: #f9f3ef; /* crem */
+  border-radius: 10px;
+}
+
+/* Thumb-ul care se mișcă */
+::-webkit-scrollbar-thumb {
+  background-color: #1b3c53; /* albastru închis */
+  border-radius: 10px;
+  border: 2px solid #f9f3ef; /* spațiu vizual */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover peste scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #153042; /* mai închis */
+}
+
+/* Scrollbar invizibil inițial, vizibil la hover/scroll pe body */
+body::-webkit-scrollbar {
+  opacity: 0;
+}
+
+body:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1b3c53 #f9f3ef;
+}
+
+.home-img {
+  width: 410px;
+  height: 410px;
+}
+.home-img .glowing-circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: yellowgreen;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glowing-circle span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f06, #3cf);
+  border-radius: 50%;
+}
+
+.glowing-circle span :nth-child(1) {
+  filter: blur(10px);
+}
+
+.glowing-circle .image {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  z-index: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.image img {
+  max-width: 350px;
+  object-fit: cover;
+}
+
+.home-img .glowing-circle::after {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: pink;
+  border-radius: 50%;
+}
