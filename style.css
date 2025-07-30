@@ -1,8 +1,22 @@
+html {
+  scroll-behavior: smooth;
+}
+
+footer {
+  height: 15vh;
+}
+
 header {
   background-color: #1b3c53;
 }
 section {
   margin-top: 0 !important;
+}
+.profile-img {
+  width: 30rem !important; /* aceeași lățime */
+  height: 30rem !important; /* aceeași înălțime */
+  object-fit: cover; /* taie imaginea dacă nu e pătrată */
+  border-radius: 50%; /* bordură rotundă */
 }
 /* From Uiverse.io by zjssun */
 .button {
@@ -149,6 +163,7 @@ a {
 }
 #home {
   background-color: #f9f3ef;
+  height: 100vh;
 }
 .custom-color {
   color: #e8e2dc !important;
@@ -164,8 +179,22 @@ a {
   text-align: center;
   border-radius: 50%;
 }
+
+.typing-text span {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+  display: inline-block;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 .handwritten {
   font-family: "Pacifico", cursive;
+  color: navy;
 }
 
 .profile-img {
@@ -175,89 +204,44 @@ a {
   height: auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-/* Scrollbar de bază pentru Chrome, Edge, Safari */
+/* Scrollbar (general) */
 ::-webkit-scrollbar {
-  width: 8px;
-  transition: opacity 0.3s ease;
+  width: 12px;
+  height: 12px;
 }
 
-/* Fundalul pistei */
+/* Track-ul (fundalul) */
 ::-webkit-scrollbar-track {
-  background: #f9f3ef; /* crem */
+  background: #0a0a0a; /* fundal închis */
   border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
-/* Thumb-ul care se mișcă */
+/* Thumb-ul (bara de scroll) */
 ::-webkit-scrollbar-thumb {
-  background-color: #1b3c53; /* albastru închis */
+  background: linear-gradient(180deg, #1e40af, #0ea5e9); /* navy -> cyan */
   border-radius: 10px;
-  border: 2px solid #f9f3ef; /* spațiu vizual */
-  transition: background-color 0.3s ease;
+  border: 2px solid #0a0a0a;
+  box-shadow: 0 0 8px rgba(14, 165, 233, 0.4);
+  transition: all 0.3s ease-in-out;
 }
 
-/* Hover peste scrollbar */
+/* Hover efect pe thumb */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #153042; /* mai închis */
+  background: linear-gradient(180deg, #2563eb, #22d3ee); /* blue vibrant */
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+  transform: scale(1.05);
 }
 
-/* Scrollbar invizibil inițial, vizibil la hover/scroll pe body */
-body::-webkit-scrollbar {
-  opacity: 0;
+.grayscale-hover {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
 }
 
-body:hover::-webkit-scrollbar {
-  opacity: 1;
+.grayscale-hover:hover {
+  filter: grayscale(0%);
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #1b3c53 #f9f3ef;
-}
-
-.home-img {
-  width: 410px;
-  height: 410px;
-}
-.home-img .glowing-circle {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: yellowgreen;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.glowing-circle span {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#f06, #3cf);
-  border-radius: 50%;
-}
-
-.glowing-circle span :nth-child(1) {
-  filter: blur(10px);
-}
-
-.glowing-circle .image {
-  position: relative;
-  width: 380px;
-  height: 380px;
-  z-index: 1;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.image img {
-  max-width: 350px;
-  object-fit: cover;
-}
-
-.home-img .glowing-circle::after {
-  position: absolute;
-  width: 380px;
-  height: 380px;
-  background: pink;
-  border-radius: 50%;
+body {
+  cursor: url("./pictures/cursor.png") 16 16, auto;
 }

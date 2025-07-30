@@ -7,24 +7,28 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
-  <header class="d-flex flex-wrap align-items-center py-3 mb-4 border-bottom">
+
+  <header class="d-flex flex-wrap align-items-center py-3 border-bottom sticky-top">
     <a href="#home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
       <svg class="bi me-2" width="32" height="32" aria-hidden="true">
         <use xlink:href="#bootstrap"></use>
       </svg>
-      <span><img class="rounded-circle me-2" width="80" height="80" src="./pictures/icon_profile.jpg" alt="profile" />
+      <span><img class="rounded-circle me-2 grayscale-hover" width="80" height="80" src="./pictures/icon_profile.jpg"
+          alt="profile" onclick="deruleazaLa('home')" />
       </span>
     </a>
 
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a href="#" class="button active" aria-current="page">Home</a>
+        <a href="#home" onclick="deruleazaLa('home')" class="button active" aria-current="page">Home</a>
       </li>
-      <li class="nav-item"><a href="#aboutme" class="nav-link">About Me</a></li>
-      <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="#aboutme" onclick="deruleazaLa('aboutme')" class="nav-link">About Me</a></li>
+      <li class="nav-item"><a href="#projects" onclick="deruleazaLa('projects')" class="nav-link">Projects</a></li>
     </ul>
   </header>
   <section id="home">
@@ -32,48 +36,58 @@
       <div class="row align-items-center g-5 py-5">
         <!-- TEXT IN STÂNGA -->
         <div class="col-lg-6 order-lg-1 order-2">
-          <h1 class="display-5 fw-bold handwritten lh-1 mb-3 text-primary">
-            Hello, my name is Vasilescu Alexandru
-          </h1>
-          <p class="lead">
-            I'm a passionate Software Engineering student, actively seeking new opportunities to grow professionally.
-            I have strong knowledge in C++, C#, and front-end web development.
-            I enjoy building clean and responsive user interfaces, working on real-world problems, and learning new
-            technologies.
-            I'm a fast learner, a great team player, and always open to challenges that push me beyond my comfort zone.
+          <p class="typing-text handwritten">
+            <span style="animation-delay: 0s" class="fs-4">Hello,</span>
+            <span style="animation-delay: 0.3s" class="fs-4">my name</span>
+            <span style="animation-delay: 0.6s" class="fs-4">is Vasilescu</span>
+            <span style="animation-delay: 0.9s" class="fs-4">Alexandru</span>
+            <span style="animation-delay: 1.2s" class="fs-4">I'm</span>
+            <span style="animation-delay: 1.5s" class="fs-4">a passionate</span>
+            <span style="animation-delay: 1.8s" class="fs-4">Software Engineering</span>
+            <span style="animation-delay: 2.1s" class="fs-4">student,</span>
+            <span style="animation-delay: 2.4s" class="fs-4">actively seeking</span>
+            <span style="animation-delay: 2.7s" class="fs-4">new opportunities</span>
+            <span style="animation-delay: 3s" class="fs-4">to grow professionally</span>
           </p>
+          <p class="lead">
+            <span data-aos="fade-right" data-aos-delay="4200" data-aos-duration="2000" style="display: block;">
+              I have strong knowledge in C++, C#, and front-end web development.
+            </span>
+            <span data-aos="fade-left" data-aos-delay="4500" data-aos-duration="2000" style="display: block;">
+              I enjoy building clean and responsive user interfaces, working on real-world problems, and learning new
+              technologies.
+            </span>
+            <span data-aos="fade-right" data-aos-delay="4800" data-aos-duration="2000" style="display: block;">
+              I'm a fast learner, a great team player, and always open to challenges that push me beyond my comfort
+              zone.
+            </span>
+          </p>
+
+
+          <!-- Butoanele sub text -->
+          <div class="mt-4">
+            <a href="CV Personal.pdf" download class="btn btn-primary btn-lg px-4 me-2">Hire Me</a>
+            <a href="#Contact" class="btn btn-outline-secondary btn-lg px-4">Contact Me</a>
+          </div>
         </div>
 
-        <div class="home-img">
-          <div class="glowing-circle">
-            <span></span>
-            <span></span>
-            <div class="image">
-              <img src="./pictures/profile-picture.jpg" alt="profile-picture">
-            </div>
-          </div>
+        <!-- IMAGINE IN DREAPTA -->
+        <div class="col-lg-6 order-lg-2 order-1 d-flex justify-content-center">
+          <img src="./pictures/profile-picture.jpeg" alt="profile-picture" class="profile-img" data-aos="fade-up"
+            data-aos-delay="2100" data-aos-duration="1600" />
         </div>
       </div>
     </div>
 
-    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-      <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
-        <a href="CV Personal.pdf" download>Hire Me</a>
-      </button>
-      <button type="button" class="btn btn-outline-secondary btn-lg px-4">
-        <a href="#Contact">Contact Me</a>
-      </button>
-    </div>
-    </div>
-    </div>
   </section>
 
   <section id="aboutme">
     <div class="position-relative p-5 text-center custom-color bg-body border border-dashed rounded-5">
 
-      <img src="./pictures/icon_profile.jpg" class="logo-pict">
-      <h1 class="text-body-emphasis custom-color">About Me</h1>
-      <p class="col-lg-6 mx-auto mb-4 fs-4">
+      <img src="./pictures/icon.jpg" class="logo-pict" data-aos="fade-up" data-aos-delay="1600" data-aos-duration="900">
+      <h1 class="text-body-emphasis custom-color" data-aos="fade-left" data-aos-delay="1400" data-aos-duration="1200">
+        About Me</h1>
+      <p class="col-lg-6 mx-auto mb-4 fs-4" data-aos="fade-right" data-aos-delay="1800" data-aos-duration="1200">
         My name is Vasilescu Alexandru Gabriel, and I am currently a second-year student at the Faculty of Automation
         and Computers, University Politehnica of Bucharest. I have a strong passion for programming and technology in
         general.
@@ -93,10 +107,12 @@
 
 
   <section id="projects">
-    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5 custom-bg-crem">
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center custom-bg-crem">
       <div class="col d-flex flex-column align-items-center gap-2">
-        <h2 class="fw-bold text-body-emphasis custom-bg-crem">Programing Skills</h2>
-        <p class="text-body-primary fs-5 custom-bg-crem">
+        <h2 class="fw-bold text-body-emphasis custom-bg-crem" data-aos="fade-right" data-aos-delay="1000"
+          data-aos-duration="1200">Programing Skills</h2>
+        <p class="text-body-primary fs-5 custom-bg-crem" data-aos="fade-up" data-aos-delay="1200"
+          data-aos-duration="1200">
           My programming skills are built on solid experience with languages such as Python, C, C++, Java, and web
           development technologies. I have a strong foundation in both procedural and object-oriented programming, and
           I've applied my knowledge in various academic and personal projects. I'm also familiar with front-end and
@@ -115,8 +131,9 @@
       <div class="col">
         <div class="row row-cols-1 row-cols-sm-2 g-4">
           <div class="col d-flex flex-column gap-2">
-            <img src="./pictures/C-logo.png" alt="C-logo" class="logo-pict">
-            <p class="text-body-secondary">
+            <img src="./pictures/C-logo.png" alt="C-logo" class="logo-pict" data-aos="fade-down" data-aos-delay="1300"
+              data-aos-duration="1200">
+            <p class="text-body-secondary" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1200">
               I have strong knowledge of C, especially for embedded systems and microcontroller programming.
               One of my main projects is "LANParty", a system that automates team matchups and scoreboard control for
               LAN tournaments, fully developed in C.
@@ -124,8 +141,9 @@
             </p>
           </div>
           <div class="col d-flex flex-column gap-2">
-            <img src="./pictures/Python-logo.png" alt="Python-logo" class="logo-pict">
-            <p class="text-body-secondary">
+            <img src="./pictures/Python-logo.png" alt="Python-logo" class="logo-pict" data-aos="fade-up"
+              data-aos-delay="1600" data-aos-duration="1200">
+            <p class="text-body-secondary" data-aos="fade-down" data-aos-delay="1800" data-aos-duration="1200">
               I have a solid understanding of Python and have used it for algorithmic problem solving, scripting, and
               data processing tasks.
               Although I don't have a public project yet, I am confident working with Python and plan to build projects
@@ -133,8 +151,9 @@
             </p>
           </div>
           <div class="col d-flex flex-column gap-2">
-            <img src="./pictures/JAVA-logo.png" alt="Java-logo" class="logo-pict">
-            <p class="text-body-secondary">
+            <img src="./pictures/JAVA-logo.png" alt="Java-logo" class="logo-pict" data-aos="fade-up"
+              data-aos-delay="1900" data-aos-duration="1200">
+            <p class="text-body-secondary" data-aos="fade-down" data-aos-delay="2100" data-aos-duration="1200">
               I have a good grasp of Java, with experience in object-oriented programming, data structures, and basic
               application development.
               While I haven't published any Java projects yet, I’ve practiced through labs and assignments, and I’m
@@ -142,8 +161,9 @@
             </p>
           </div>
           <div class="col d-flex flex-column gap-2">
-            <img src="./pictures/Web-dev.png" alt="Web-logo" class="logo-pict">
-            <p class="text-body-secondary">
+            <img src="./pictures/Web-dev.png" alt="Web-logo" class="logo-pict" data-aos="fade-down"
+              data-aos-delay="2200" data-aos-duration="1200">
+            <p class="text-body-secondary" data-aos="fade-up" data-aos-delay="2400" data-aos-duration="1200">
               I have solid experience in front-end web development, working mainly with HTML, CSS, JavaScript, and
               Bootstrap.
               I've built responsive and visually appealing websites, and one example is “Tindog”, a playful,
@@ -156,9 +176,8 @@
     </div>
     </div>
   </section>
-
-  <footer class="py-3 my-4" id="Contact">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+  <footer id="Contact">
+    <ul class="nav justify-content-center border-bottom pb-3 ">
       <li class="nav-item">
         <p class="nav-link px-4 fs-6 text-body-secondary">Contact me</p>
       </li>
@@ -197,11 +216,18 @@
           </svg></a>
       </li>
     </ul>
-    <p class="text-center text-body-secondary">© 2025 Vasi, Inc</p>
+    <p class="text-center text-body-secondary fs-5">© 2025 Vasi, Inc</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
+  <script src="index.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 
 </html>
