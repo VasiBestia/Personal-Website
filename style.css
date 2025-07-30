@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-footer{
+footer {
   height: 15vh;
 }
 
@@ -13,9 +13,9 @@ section {
   margin-top: 0 !important;
 }
 .profile-img {
-  width: 30rem !important;       /* aceeași lățime */
-  height: 30rem !important;      /* aceeași înălțime */
-  object-fit: cover;  /* taie imaginea dacă nu e pătrată */
+  width: 30rem !important; /* aceeași lățime */
+  height: 30rem !important; /* aceeași înălțime */
+  object-fit: cover; /* taie imaginea dacă nu e pătrată */
   border-radius: 50%; /* bordură rotundă */
 }
 /* From Uiverse.io by zjssun */
@@ -192,10 +192,9 @@ a {
   }
 }
 
-
 .handwritten {
   font-family: "Pacifico", cursive;
-  color:navy;
+  color: navy;
 }
 
 .profile-img {
@@ -234,7 +233,6 @@ a {
   transform: scale(1.05);
 }
 
-
 .grayscale-hover {
   filter: grayscale(100%);
   transition: filter 0.5s ease;
@@ -247,5 +245,3 @@ a {
 body {
   cursor: url("./pictures/cursor.png") 16 16, auto;
 }
-
-
